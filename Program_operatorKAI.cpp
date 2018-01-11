@@ -1,8 +1,8 @@
-#include<iostream>
-#include<stdio.h>
-#include<conio.h>
-#include<stdlib.h>
-#include<ctype.h>
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 using namespace std;
 
@@ -179,10 +179,11 @@ void insertData()
   tail->next = nodeBaru;
   tail = nodeBaru;
  }
-
- printf("Data kereta %i masuk antrian!\n\n", angka);
- printf("%i antrian Kereta!\n\n", nama);
- printf("%i waktu antrian!\n\n", jam);
+ cout<<"\n||+++++++++++++++++++++++++++++++++++++++++++||\n";
+ cout<<"Kode Kereta "<<angka<<" masuk antrian! "<<endl;
+ cout<<"Antrian Kereta! " << nama << endl;
+ cout<<"Waktu antrian! " << jam << endl;
+ cout<<"||+++++++++++++++++++++++++++++++++++++++++++||\n";
  puts("Press any key for back to the menu");
  getch();
  system("cls");
@@ -265,7 +266,7 @@ void tampil()
  Node *see;
 
  see = head;
-
+ int no = 1;
  if(tail != NULL)
  {
   puts("Daftar Data Antrian Kereta Api :");
@@ -273,8 +274,9 @@ void tampil()
 
   while(see != NULL)
   {
-   printf("%i ", see->data);
+   cout<<no<<". "<<see->data<<" "<<see->waktu<<" "<<see->kereta<<endl;
    puts("");
+   no++;
    see = see->next;
   }
   puts("\n");
